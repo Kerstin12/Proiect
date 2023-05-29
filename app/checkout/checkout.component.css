@@ -1,0 +1,27 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+  .centered-text {
+    text-align: center;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .centered-button {
+    margin: 0 10px;
+  }
+  .bigger-text {
+    font-size: 40px;
+  }
+  .lower-text {
+    margin-top: 20px;
+  }
+  
+  

@@ -1,0 +1,15 @@
+<section style="padding-top: 140px;" class="container">
+    <!-- <tr> -->
+    <div class="item" *ngFor="let pantaloni of pantaloniFromDB"  ><img src="{{pantaloni.Imagine}}" class="picture1">
+     <p class="pose" style="font-size:20px"> {{pantaloni.Pret}} lei</p>
+     <section style="margin-left: 280px; margin-bottom: 30px;">
+        <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(pantaloni, 'S')">S</button>
+        <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(pantaloni, 'M')">M</button>
+        <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(pantaloni, 'L')">L</button>
+    </section>
+     <button mat-raised-button routerLink="/cos" style="margin-left: 220px; margin-bottom: 30px;" *ngIf="selectedSize === pantaloni && marime !== ''" (click)="addToCart(pantaloni)">
+     <span class="text-color">Adaugati in cos</span> </button>
+     </div>
+    <!-- </tr> -->
+</section>
+

@@ -1,0 +1,72 @@
+<div style="margin-top: 100px;">
+    <button mat-raised-button id="toggle-linear" style="display: none;">Enable linear mode</button>
+  <mat-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Completeaza numele</ng-template>
+        <mat-form-field>
+          <mat-label>Nume</mat-label>
+          <input matInput placeholder="Nume, Prenume" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Mai departe</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Completeaza adresa">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label >Adresa</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. Str. Oasa, Sibiu, Sibiu"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Inapoi</button>
+          <button mat-button matStepperNext>Mai departe</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Adresa E-mail">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label >E-mail</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. alina@yahoo.com"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Inapoi</button>
+          <button mat-button matStepperNext>Mai departe</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Completeaza numarul de telefon">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label >Telefon</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 0749xxxxxx"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Inapoi</button>
+          <button mat-button matStepperNext>Mai departe</button>
+        </div>
+      </form>
+    </mat-step>
+    
+    <mat-step [stepControl]="secondFormGroup" label="Modalitate de plata">
+      <form [formGroup]="secondFormGroup">
+        <div>
+          <button mat-button matStepperNext>Numerar</button>
+          <button mat-button matStepperNext>Card</button>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Inapoi</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Gata</ng-template>
+      <p  class="centered-text bigger-text lower-text">Comanda a fost plasata cu succes!</p>
+      <p  class="centered-text bigger-text lower-text">Va multumim!</p>
+    </mat-step>
+  </mat-stepper></div>

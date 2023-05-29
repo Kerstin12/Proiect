@@ -1,0 +1,14 @@
+<section style="padding-top: 140px;" class="container">
+    <!-- <tr> -->
+    <div class="item" *ngFor="let rochii of rochiiFromDB"  ><img src="{{rochii.Imagine}}" class="picture1">
+     <p class="pose" style="font-size:20px"> {{rochii.Pret}} lei</p>
+     <section style="margin-left: 280px; margin-bottom: 30px;">
+        <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(rochii, 'S')">S</button>
+        <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(rochii, 'M')">M</button>
+        <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(rochii, 'L')">L</button>
+    </section>
+     <button mat-raised-button routerLink="/cos" style="margin-left: 220px; margin-bottom: 30px;" *ngIf="selectedSize === rochii && marime !== ''" (click)="addToCart(rochii)">
+     <span class="text-color">Adaugati in cos</span> </button>
+     </div>
+    <!-- </tr> -->
+</section>

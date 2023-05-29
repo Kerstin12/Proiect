@@ -1,0 +1,27 @@
+<section  style=" color: rgb(188, 6, 115); font-family: 'Merriweather', serif; margin-left: 40px;">
+  <div class="cart-summary">
+    <h2>Coș de cumpărături:</h2>
+    <p>{{ cart.items.length }} Produse in coș </p>
+  </div>
+    <ul class="cart-items">
+      <li *ngFor="let item of cart.items">
+        <img src="{{item.image}}" alt="{{ item.title }}" class="item-image">
+        <div class="item-details">
+        <h3 class="item-title">{{ item.title }}</h3>
+        <p class="item-text">Nume: {{ item.name }}</p>
+        <p class="item-text">Preț: {{ item.price | currency:' RON ' }}</p>
+        <div>
+        <p class="item-text">Cantitate : {{ item.quantity }}</p>
+        <button  (click)="decreaseQuantity(item)">-</button>
+        <button  (click)="increaseQuantity(item)">+</button>
+      </div>
+        <P class="item-text">Marime: {{item.marime}}</P>
+        <button (click)="removeFromCart(item)" class="button-text" >Șterge</button>
+      </div>
+      </li>
+    </ul>
+    <div class="cart-summary">
+      <p>Total: {{ cart.total | currency:' RON ' }}</p>
+      <button  mat-icon-button routerLink="/checkout" class="button-text"> Finalizează comanda </button>
+    </div>
+  </section>

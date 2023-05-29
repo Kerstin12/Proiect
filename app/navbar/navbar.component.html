@@ -1,0 +1,40 @@
+<section style="background-color: lightpink; padding-top: 5px;" class="container;item">
+<div class="text-center">
+    <h1 class="color" style="font-size: 120px;font-family: 'Times New Roman', Times, serif; font-style: italic;">Chantel</h1>
+
+ </div>
+
+ <section style="text-align: right;">
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="muta" style="float: right;">
+      <mat-icon>more_vert</mat-icon>
+      <span style="font-size: 30px;" class="col">Meniu</span>
+    </button>
+  <mat-menu #menu="matMenu"  >
+    <button mat-menu-item routerLink="">
+      <mat-icon class="col">home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="submenu">
+      <mat-icon class="col">female</mat-icon>
+      Femei
+    </button>
+    <mat-menu #submenu="matMenu">
+      <button mat-menu-item routerLink="bluze">Bluze</button>
+      <button mat-menu-item routerLink="pantaloni">Pantaloni</button>
+      <button mat-menu-item routerLink="blugi">Blugi</button>
+      <button mat-menu-item routerLink="rochii">Rochii si fuste</button>
+      <button mat-menu-item routerLink="geci">Geci si jachete</button>
+      <button mat-menu-item routerLink="pulovere">Pulovere si cardigane</button>
+      <button mat-menu-item routerLink="tricouri">Tricouri si maiouri</button>
+      <button mat-menu-item routerLink="camasi">Camasi</button>
+    </mat-menu>
+    <button mat-menu-item routerLink="cos">
+      <mat-icon>shopping_cart</mat-icon>
+      <span>Cos de cumparaturi</span>
+    </button>
+  </mat-menu>
+ </section>
+ <section class="mutapic">
+  <img src="assets/logo.png" class="picture">
+ </section>
+</section>

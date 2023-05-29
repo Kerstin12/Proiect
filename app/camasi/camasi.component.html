@@ -1,0 +1,14 @@
+<section style="padding-top: 140px;" class="container">
+    <div class="item" *ngFor="let camasi of camasiFromDB">
+        <img src="{{camasi.Imagine}}" class="picture1">
+        <p class="pose" style="font-size: 20px">{{camasi.Pret}} lei</p>
+        <section style="margin-left: 280px; margin-bottom: 30px;">
+            <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(camasi, 'S')">S</button>
+            <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(camasi, 'M')">M</button>
+            <button mat-raised-button style="margin-left: 5px;" (click)="setSelectedSize(camasi, 'L')">L</button>
+        </section>
+        <button mat-raised-button routerLink="/cos" style="margin-left: 220px; margin-bottom: 30px;" *ngIf="selectedSize === camasi && marime !== ''" (click)="addToCart(camasi)">
+            <span class="text-color">Adaugati in cos</span>
+        </button>
+    </div>
+</section>

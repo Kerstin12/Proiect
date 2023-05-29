@@ -1,0 +1,32 @@
+.picture1 {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    padding-bottom: 50px;
+    padding-left: 150px ;
+    left:20px;
+    right:0px;
+    bottom:-20px
+
+  }
+  .pose{
+   padding-left: 300px;
+   color:rgb(214, 57, 57);
+  }
+
+  .text-color {
+    color: rgb(188, 6, 115);
+    font-family: 'Merriweather', serif;
+    padding-top:30px;
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    flex-basis: 20%; /* Elementele ocupă jumătate din lățimea containerului */
+    padding: 10px; /* Spațiul dintre elemente */
+  }
